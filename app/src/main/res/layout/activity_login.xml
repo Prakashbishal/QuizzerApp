@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:paddingStart="10.40dp"
+        android:background="@android:color/white"
+        android:paddingEnd="10.4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewCancel"
+            android:textColor="@color/color_blue_qb"
+            android:textSize="16.90dp"
+            android:layout_centerVertical="true"
+            android:text="Cancel"/>
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/montserratsemibold"
+            android:text="Welcome"
+            android:textColor="@android:color/black"
+            android:textSize="16.90dp" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="26dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45.5dp"
+            android:fontFamily="@font/montserratregular"
+            android:inputType="textEmailAddress"
+            android:hint="Email Address"
+            android:background="@null"
+            android:gravity="center"
+            android:id="@+id/editTextEmail"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="18dp"
+            android:background="@color/lightGrey"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45.5dp"
+            android:fontFamily="@font/montserratregular"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:background="@null"
+            android:gravity="center"
+            android:id="@+id/editTextPassword"/>
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSignup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginEnd="13dp"
+            android:background="@color/color_blue_qb"
+            android:fontFamily="@font/montserratsemibold"
+            android:text="Sign in"
+            android:textAllCaps="false"
+            android:layout_marginTop="26dp"
+            android:textColor="@android:color/white"
+            android:textSize="18.2dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.4dp"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightGrey"/>
+    </LinearLayout>
+
+</LinearLayout>
