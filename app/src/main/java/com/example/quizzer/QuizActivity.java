@@ -80,23 +80,19 @@ public class QuizActivity extends AppCompatActivity {
 
                 totalTimeInMin=Integer.parseInt(snapshot.child("time").getValue(String.class));
 
-                for(DataSnapshot dataSnapshot:snapshot.child("getSelectedTopicName").getChildren()){
+                for(DataSnapshot dataSnapshot:snapshot.child(getSelectedTopicName).getChildren()){
                     final String getQuestion=dataSnapshot.child("question").getValue(String.class);
                     final String getOption1=dataSnapshot.child("option1").getValue(String.class);
                     final String getOption2=dataSnapshot.child("option2").getValue(String.class);
                     final String getOption3=dataSnapshot.child("option3").getValue(String.class);
                     final String getOption4=dataSnapshot.child("option4").getValue(String.class);
-
                     final String getAnswer=dataSnapshot.child("answer").getValue(String.class);
-
-
                     QuestionsList questionsList=new QuestionsList(getQuestion,getOption1,getOption2,getOption3,getOption4,getAnswer);
                     questionsLists.add(questionsList);
                 }
 
                 progressDialog.hide();
                 questions.setText((currentQuestionPosition+1)+"/"+questionsLists.size());
-
                 question.setText(questionsLists.get(currentQuestionPosition).getQuestion());
                 option1.setText(questionsLists.get(currentQuestionPosition).getOption1());
                 option2.setText(questionsLists.get(currentQuestionPosition).getOption2());
@@ -105,10 +101,14 @@ public class QuizActivity extends AppCompatActivity {
 
                 startTimer(timer);
 
-
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
+                quizTimer.purge();
+                quizTimer.cancel();
+
+                startActivity(new Intent(QuizActivity.this,OptionActivity.class));
+                finish();
 
             }
         });

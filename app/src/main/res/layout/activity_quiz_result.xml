@@ -42,7 +42,8 @@
             android:id="@+id/correctAnswers"
             android:text="Correct Answer : 0"
             android:textStyle="bold"
-            android:textColor="#00c853"/>
+            android:textSize="20sp"
+            android:textColor="@color/white_green"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -50,6 +51,7 @@
             android:id="@+id/incorrectAnswers"
             android:layout_marginTop="5dp"
             android:textColor="#DD2C00"
+            android:textSize="20sp"
             android:text="Wrong Answer : 0"
             android:textStyle="bold"/>
 
